@@ -10,8 +10,12 @@ $_SESSION['certificaciones'] = $_POST['certificaciones'];
 <head>
     <meta charset="UTF-8">
     <title>Certificaciones Adicionales</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<div id="menuppal">
+        <a href="Formulario.html">Volver</a>
+    </div>
     <h1>Certificaciones Adicionales</h1>
     <form action="factura.php" method="POST">
         <p><strong>Nombre del Cliente:</strong> <?php echo $_SESSION['nombre']; ?></p>

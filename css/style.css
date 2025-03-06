@@ -1,0 +1,34 @@
+#menuppal {
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+    background-color: beige;
+    height: 50px;
+    padding-top: 15px;
+}
+#menuppal a {
+    margin-right: 25px;
+    margin-top: 10px;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: #cf6b07 2px solid;
+    border-radius: 15px;
+}
+
+#menuppal a:hover{
+    background-color: #cf6b07;
+    color: #f1bc87;
+}
+
+body {
+    margin: 5px;
+}
+h1{
+    color:#cf6b07;
+    background-color: #f1bc87;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
