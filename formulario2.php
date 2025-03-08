@@ -10,7 +10,7 @@ $_SESSION['certificaciones'] = $_POST['certificaciones'];
 <head>
     <meta charset="UTF-8">
     <title>Certificaciones Adicionales</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="menuppal">
