@@ -81,8 +81,8 @@ class Factura {
     public function mostrarFactura() {
         echo "<h2>Resumen de la Factura</h2>";
         echo "<p><strong>Nombre del Cliente:</strong> " . $this->nombreCliente . "</p>";
-        echo "<p><strong>Tipo de Curso Base:</strong> " . $this->curso->getTipoCurso() . "</p>"; // Mostrar el tipo de curso
-        echo "<p><strong>Costo Base:</strong> $" . number_format($this->curso->getCostoBase(), 2, ',', '.') . "</p>"; // Mostrar el costo base
+        echo "<p><strong>Tipo de Curso Base:</strong> " . $this->curso->getTipoCurso() . "</p>";
+        echo "<p><strong>Costo Base:</strong> $" . number_format($this->curso->getCostoBase(), 2, ',', '.') . "</p>";
         echo "<p><strong>Certificaciones Adicionales:</strong></p>";
         foreach ($this->certificaciones as $index => $certificacion) {
             echo "<p>Certificación " . ($index + 1) . ": " . $certificacion['nombre'] . " - $" . number_format($certificacion['costo'], 2, ',', '.') . "</p>";
