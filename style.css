@@ -7,39 +7,36 @@
     padding-top: 15px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
+
 #menuppal a {
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 0px;
-    margin-bottom: 25px;
-    padding: 10px 3px;
+    margin: 0 15px; /* Simplificado */
+    padding: 10px 20px; /* Ajustado */
     text-decoration: none;
     text-transform: uppercase;
     border: #965690 2px solid;
     border-radius: 10px;
     background-color: #dd79c5;
     color: #ffffff;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    text-align: center; /* Centrar texto */
+    display: inline-block; /* Mejor que flex para enlaces */
 }
 
-#menuppal a:hover{
+#menuppal a:hover {
     background-color: #965690;
     color: #ffffff;
 }
 
 body {
     font-family: sans-serif;
-    margin: 20px;
+    margin: 0; /* Ajustado */
     padding: 20px;
     background-color: #e2b7d7;
 }
 
 h1 {
     color: #000000;
+    text-align: center; /* Centrar el título */
 }
 
 form {
@@ -47,9 +44,14 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limitar el ancho del formulario */
+    margin: 0 auto; /* Centrar el formulario */
 }
+
 label {
     font-weight: bold;
+    display: block; /* Asegurar que las etiquetas estén en una línea separada */
+    margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -57,9 +59,10 @@ input[type="number"],
 select {
     width: 100%;
     padding: 8px;
-    margin: 8px 0;
+    margin: 8px 0 16px 0; /* Ajustado */
     border: 1px solid #dd79c5;
     border-radius: 4px;
+    box-sizing: border-box; /* Incluir padding en el ancho */
 }
 
 input[type="submit"] {
@@ -69,10 +72,13 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%; /* Botón de ancho completo */
+    font-size: 16px; /* Tamaño de fuente más grande */
 }
 
 input[type="submit"]:hover {
-    background-color: #dd79c5;
+    background-color: #965690; /* Cambiado para efecto hover */
+    color: #ffffff;
 }
 
 p {

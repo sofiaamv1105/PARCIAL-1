@@ -1,3 +1,59 @@
-@startuml
-Bob -> Alice : hello
+@startuml "Diagrama de Clases - Reserva de Curso de Buceo"
+
+' Definición de clases
+class Curso {
+  - tipoCurso: String
+  - costoBase: float
+  + __construct(tipoCurso: String): void
+  - calcularCostoBase(): float
+  + getCostoBase(): float
+  + getTipoCurso(): String
+}
+
+class Factura {
+  - nombreCliente: String
+  - curso: Curso
+  - certificaciones: List<Map<String, float>>
+  - subtotal: float
+  - descuento: float
+  - iva: float
+  - total: float
+  + __construct(nombreCliente: String, curso: Curso): void
+  + agregarCertificacion(nombre: String, costo: float): void
+  + calcularSubtotal(): void
+  + calcularDescuento(): void
+  + calcularIVA(): void
+  + calcularTotal(): void
+  + mostrarFactura(): void
+}
+
+' Relaciones
+Factura "1" --> "1" Curso : contiene
+
+' Notas adicionales
+note right of Curso::calcularCostoBase
+  Este método calcula el costo base
+  según el tipo de curso seleccionado.
+end note
+
+note right of Factura::calcularSubtotal
+  Calcula el subtotal sumando el costo base
+  del curso y los costos de las certificaciones.
+end note
+
+note right of Factura::calcularDescuento
+  Aplica un descuento basado en el número
+  de certificaciones adicionales.
+end note
+
+note right of Factura::calcularIVA
+  Calcula el IVA (19%) sobre el subtotal
+  menos el descuento.
+end note
+
+note right of Factura::calcularTotal
+  Calcula el total sumando el subtotal,
+  restando el descuento y agregando el IVA.
+end note
+
 @enduml
